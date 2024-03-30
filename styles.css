@@ -1,0 +1,276 @@
+body {
+  font-family: "Montserrat", sans-serif;
+
+
+}
+header .navbar .navbar-brand {
+  padding: 38px 0 18px 0;
+}
+header .navbar .nav-link {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-right: 72px;
+}
+header .navbar .nav-link.active {
+  font-weight: 600;
+  border-bottom: 2px solid #000;
+}
+.container-fluid {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.col {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+
+.carousel-item{
+
+object-fit:cover;
+object-position:center;
+}
+.carousel-item img{
+object-fit: cover;
+object-position: center;
+}
+.main-slider .carousel-item h5 {
+  margin-left: 88px;
+  color: #fff;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  margin-bottom: 37px;
+}
+.main-slider .carousel-indicators [data-bs-target] {
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+.main-slider .carousel-control-next-icon,
+.main-slider .carousel-control-prev-icon {
+  width: 37px;
+  height: 72px;
+  background-size: 230%;
+}
+
+.home-info {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+.home-info p {
+  color: #525252;
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+}
+.grid-item {
+  position: relative;
+  min-height: 150px;
+  filter: grayscale(1);
+  transition: filter 0.3s;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+}
+.grid-item:hover {
+  filter: grayscale(0);
+}
+.grid-item .title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00000077;
+  transition: opacity 0.3s;
+  height: 100%;
+  background-image: 100%;
+}
+.grid-item .title h6 {
+  font-size: 40px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+}
+.grid-item:hover .title {
+  opacity: 1;
+}
+section.contact {
+  padding: 168px 0 231px;
+}
+.contact h3 {
+  color: #525252;
+  font-size: 32px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 38px;
+}
+.contact form .form-control {
+  border-radius: 15px;
+  background-color: #d9d9d9;
+}
+.contact form .form-label {
+  color: #525252;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  margin-left: 16px;
+}
+.contact form button.btn {
+  margin-top: 56px;
+  border-radius: 15px;
+  background-color: #c2c2c2;
+  color: #525252;
+  padding-left: 48px;
+  padding-right: 48px;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+}
+.catalog {
+  padding: 105px 80px 0;
+}
+.catalog h4 {
+  color: #525252;
+  font-size: 36px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.catalog .nav .nav-link {
+  color: rgba(15, 15, 15, 0.4);
+  font-size: 26px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0 25px;
+}
+.catalog .nav .nav-link.active {
+  color: #525252;
+  border-bottom: 2px solid #525252;
+}
+.catalog .tab-details {
+  margin-top: 124px;
+}
+.catalog .tab-details a {
+  text-decoration: none;
+}
+.catalog .tab-details h4 {
+  font-size: 28px;
+}
+.catalog .tab-details .grid-item {
+  min-height: 314px;
+}
+
+.search-input .input-group-text {
+  border-radius: 50px;
+  border-color: #525252;
+  border-width: 2px;
+}
+.search-input .form-control {
+  border-radius: 50px;
+  border-color: #525252;
+  border-width: 2px;
+}
+.super-index {
+  vertical-align: super;
+  font-size: 20px;
+}
+.banner-img {
+  display:block;
+  max-height: 100vh;
+object-fit:cover;
+object-position:center;
+}
+.img-description {
+max-height: 100vh;
+
+
+}
+
+.proyect-details h4 {
+  background: rgb(51, 51, 51);
+  background: linear-gradient(
+    180deg,
+    rgba(51, 51, 51, 0.6979166666666667) 70%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  color: #fff;
+  font-size: 36px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.proyect-details h4 img {
+  filter: invert(1);
+}
+.proyect-details h4 small {
+  font-size: 24px;
+  font-weight: 400;
+}
+.proyect-details h5 {
+  color: #525252;
+  font-size: 48px;
+  font-weight: 600;
+  padding: 100px 80px 44px;
+}
+.proyect-details .proyect-descrition {
+  color: #525252;
+  font-size: 24px;
+  font-weight: 400;
+  padding: 0 48px 100px;
+}
+.proyect-details .technic-info {
+  color: #525252;
+  font-size: 21px;
+  font-weight: 400;
+}
+.proyect-details .grid-item {
+  filter: none;
+}
+.contact-map{
+margin-top: 10vh;
+}
+
+
+footer {
+
+  padding-top: 110px;
+  padding-bottom: 216px;
+}
+footer .navbar-brand img {
+  padding-top: 42px;
+  padding-bottom: 66px;
+}
+
+@media (min-width: 768px) {
+  .grid-item {
+    min-height: 300px; 
+  }
+
+ 
+}
+
+@media only screen and (max-width: 767px) {
+   .banner-img {
+height:min-content;
+} 
+}
+
+class="banner-img img-fluid w-100"
+

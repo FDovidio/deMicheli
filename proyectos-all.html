@@ -1,0 +1,704 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <title>Marciano De Micheli</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container d-flex flex-row justify-content-between">
+        <a class="navbar-brand" href="index.html"><img width="259px" height="auto" src="img/logo-de-micheli.png" /></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse flex-lg-grow-0" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="proyectos.html">Proyectos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container-fluid catalog">
+    <div class="row">
+      <div class="col-12 col-md-4 border-bottom">
+        <h4>Proyectos</h4>
+      </div>
+      <div class="col-12 col-md-8 border-bottom">
+        <ul class="nav nav-underline">
+          <li class="nav-item">
+            <a class="nav-link" type="button" href="proyectos.html">URBANISMO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="proyectos-arq.html">Arquitectura</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="proyectos-all.html">Todos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row my-5">
+      <div class="col-12 col-md-6">
+        <div class="input-group mb-3 search-input">
+          <span class="input-group-text border-end-0 bg-transparent" id=""><img class="w-75"
+              src="img/search.png"></span>
+          <input type="search" class="form-control border-start-0" id="searchCards" onkeyup="filterGrid()">
+        </div>
+      </div>
+    </div>
+  </main>
+  <div class="container-fluid px-3 mt-5">
+    <div class="row tab-details">
+      <div class="col-12" id="todos-tab">        
+        <div class="row g-3 mb-1" id="myRow">  
+          <div class= "col-6 col-md-6 col-lg-3 filter-element">
+            <a href="city-bell-chico.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/Citybell-chico.jpeg');">
+                <div class="title">
+                  <h6>
+                    CITY BELL <br />
+                    CHICO
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="carilo-bn.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/carlio-bn.jpg');">
+                <div class="title">
+                  <h6>
+                    Carilo <br />
+                    BN
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="carilo-golf.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/carlio-golfo.JPG');">
+                <div class="title">
+                  <h6>
+                    Carilo <br />
+                    Golf
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="21a-city-bell.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/21a-city-bell-portada.jpeg');">
+                <div class="title">
+                  <h6>
+                    21a City <br />
+                    Bell
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div> 
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="via-pilar.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/via-pilar.jpeg');">
+                <div class="title">
+                  <h6>
+                    Paseo Comercial <br />
+                    Via Pilar
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="nizuc-house.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/nizuc-house/Exterior\ 1.jpg');">
+                <div class="title">
+                  <h6>
+                    Nizuc <br />
+                    House
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="naudir-delta.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/naudir-delta/house\ naudir\ delta-01.jpg');">
+                <div class="title">
+                  <h6>
+                    Naudir <br />
+                    Delta
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="club-house-lemu.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/club-house-lemu/PORTADA.jpg');">
+                <div class="title">
+                  <h6>
+                    Club house <br />
+                    Lemu
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div> 
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="club-house-el-cazal.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/club-house-el-cazal/PORTADA.jpeg');">
+                <div class="title">
+                  <h6>
+                    Club house <br />
+                    El Cazal
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div> 
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="acceso-el-cazal.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/acceso-cazal/PORTADA.jpeg');">
+                <div class="title">
+                  <h6>
+                    Acceso <br />
+                    El Cazal
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div> 
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="santa-ana-65.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/santa-ana-65/PORTADA.jpg');">
+                <div class="title">
+                  <h6>
+                    Santa <br />
+                    Ana 65
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div> 
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="san-sebastian.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/san-sebastian/PORTADA.jpg');">
+                <div class="title">
+                  <h6>
+                    San <br />
+                    Sebastian
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div>  
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="nizuc-20.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/nizuc-20/PORTADA\ \(1\).jpg');">
+                <div class="title">
+                  <h6>
+                    Nizuc <br />
+                    20 M16
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="nizuc-16-m14.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/nizuc-16-m14/PORTADA.png');">
+                <div class="title">
+                  <h6>
+                    Nizuc <br />
+                    16 M14
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div> 
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="nizuc-02-m25.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/nizuc-02-m25/PORTADA.png');">
+                <div class="title">
+                  <h6>
+                    Nizuc <br />
+                    02 M25
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="nizuc-02-m19.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/nizuc-02-m19/PORTADA.jpg');">
+                <div class="title">
+                  <h6>
+                    Nizuc <br />
+                    02 M19
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div>  
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="praderas-san-lorenzo.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/praderas-san-lorenzo/PORTADA.jpeg');">
+                <div class="title">
+                  <h6>
+                    Praderas <br />
+                    San Lorenzo
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div> 
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="costa-esmeralda.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/costa-esmeralda.jpg');">
+                <div class="title">
+                  <h6>
+                    COSTA <br />
+                    ESMERALDA
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="el-campo-128.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/el-campo-128/PORTADA\ .jpg');">
+                <div class="title">
+                  <h6>
+                    El Campo <br />
+                    128
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div> 
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="la-caniada.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/la-caniada/PORTADA.jpg');">
+                <div class="title">
+                  <h6>
+                    La Cañada
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div> 
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="lemu-t1.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/lemu-t1/PORTADA.jpg');">
+                <div class="title">
+                  <h6>
+                    Lemu T1
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div> 
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="naudir-764.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/naudir-764/PORTADA.jpg');">
+                <div class="title">
+                  <h6>
+                    Naudir <br />
+                    764
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div> 
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="naudir-645.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/naudir-645/PORTADA.jpg');">
+                <div class="title">
+                  <h6>
+                    Naudir <br />
+                    645
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="naudir-509.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/naudir-509/PORTADA.jpeg');">
+                <div class="title">
+                  <h6>
+                    Naudir <br />
+                    509
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="naudir-286.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/naudir-286/PORTADA.jpg');">
+                <div class="title">
+                  <h6>
+                    Naudir <br />
+                    286
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="naudir-201.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/naudir-201/PORTADA.jpg');">
+                <div class="title">
+                  <h6>
+                    Naudir <br />
+                    201
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div> 
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="naudir-802.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/naudir-802/PORTADA.png');">
+                <div class="title">
+                  <h6>
+                    Naudir <br />
+                    802
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div> 
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="naudir-667.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/naudir-667/PORTADA.jpg');">
+                <div class="title">
+                  <h6>
+                    Naudir <br />
+                    667
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div> 
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="naudir-377.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/naudir-377/PORTADA.png');">
+                <div class="title">
+                  <h6>
+                    Naudir <br />
+                    377
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div> 
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="naudir-254.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/naudir-254/PORTADA.jpg');">
+                <div class="title">
+                  <h6>
+                    Naudir <br />
+                    254
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="naudir-251.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/naudir-251/PORTADA.jpeg');">
+                <div class="title">
+                  <h6>
+                    Naudir <br />
+                    251
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div> 
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="naudir-246.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/naudir-246/PORTADA.png');">
+                <div class="title">
+                  <h6>
+                    Naudir <br />
+                    246
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="naudir-239.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/naudir-239/PORTADA.jpg');">
+                <div class="title">
+                  <h6>
+                    Naudir <br />
+                    239
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="naudir-220.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/naudir-220/PORTADA.jpeg');">
+                <div class="title">
+                  <h6>
+                    Naudir <br />
+                    220
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div>  
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="puerto-parana.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/puerto-parana/PORTADA.jpeg');">
+                <div class="title">
+                  <h6>
+                    Puerto <br />
+                    Río Parana
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div> 
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="naudir-1-2.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/naudir-I-II/PORTADA.jpg');">
+                <div class="title">
+                  <h6>
+                    Naudir I y II 
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div>  
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="lemu.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/lemu/1.\ PORTADA\ .jpg');">
+                <div class="title">
+                  <h6>
+                    Lemu
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div>  
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="laguna-garzon.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/laguna-garzon/WhatsApp\ Image\ 2024-01-30\ at\ 14.59.14.jpeg');">
+                <div class="title">
+                  <h6>
+                    Laguna <br/>
+                    Garzón
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="isla-victoria.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/isla-victoria/PORTADA.jpg');">
+                <div class="title">
+                  <h6>
+                    Isla <br/>
+                    Victoria
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="isla-parana.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/isla-parana/PORTADA\ \(1\).jpg');">
+                <div class="title">
+                  <h6>
+                    Isla <br/>
+                    Paraná
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="frente-nizuc.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/frente-nizuc/Render\ 1.jpg');">
+                <div class="title">
+                  <h6>
+                    Frente <br/>
+                    Lineal Nizuc
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div> 
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="el-cazal.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/el-cazal/PORTADA.jpg');">
+                <div class="title">
+                  <h6>
+                    El Cazal
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div> 
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="el-campo.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/el-campo/PORTADA.24.jpg');">
+                <div class="title">
+                  <h6>
+                    El Campo
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div> 
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="delta-house.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/delta-house/PORTADA.jpg');">
+                <div class="title">
+                  <h6>
+                    Delta <br/>
+                    House
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div> 
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="costa-delta.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/costa-delta/1.\ PORTADA.jpg');">
+                <div class="title">
+                  <h6>
+                    Costa <br/>
+                    Delta
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div> 
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="barcelona.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/barcelona/1.\ PORTADA.jpg');">
+                <div class="title">
+                  <h6>
+                   GUALBA
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-md-6 col-lg-3 filter-element">
+            <a href="berazategui.html" class="d-block">
+              <div class="grid-item" style="background-image: url('img/berazategui/PORTADA.jpg');">
+                <div class="title">
+                  <h6>
+                    Berazategui
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div> 
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+  <!-- FOOTER -->
+  <footer class="container">
+    <div class="row">
+      <div class="col-12 col-md-4 offset-1">
+        <a class="navbar-brand" href="index.html"><img width="316px" height="auto" src="img/logo-de-micheli.png" /></a>
+      </div>
+      <div class="col-12 col-md-7 border-start border-2 border-black d-flex flex-column justify-content-center">
+        <div class="row">
+          <div class="col-12 col-md-5 offset-md-2">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item py-3">
+                <a class="nav-link" href="proyectos.html">Proyectos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-5">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.instagram.com/marcianodemicheli/?hl=es"><img src="img/ig-logo.png"
+                    class=""> Instagram</a>
+              </li>
+              <li class="nav-item py-2">
+                <a class="nav-link"><img src="img/envelop.png" class=""> info@marcianodemicheli.com</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"><img src="img/phone.png" class=""> +54 11 5027 3534</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function filterGrid() {
+      var input, filter, grid, gridItems, title, i, txtValue;
+      input = document.getElementById('searchCards');
+      filter = input.value.toUpperCase();
+      grid = document.getElementById('myRow');
+      gridItems = grid.getElementsByClassName('filter-element');
+
+      for (i = 0; i < gridItems.length; i++) {
+        title = gridItems[i].querySelector('.title');
+        txtValue = title.textContent || title.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          gridItems[i].style.display = '';
+        } else {
+          gridItems[i].style.display = 'none';
+        }
+      }
+    }
+  </script>
+
+</body>
+
+</html>

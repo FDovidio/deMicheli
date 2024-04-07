@@ -7,29 +7,73 @@
   <meta name="description" content="">
   <title>Marciano De Micheli</title>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+  <!--inizializador de mapa-->
+    <script>
+        function initMap() {
+            var marker1 = { lat: -34.6060489, lng: -58.3665685 };
+            var marker2 = { lat: -34.8716133, lng: -58.0302865};
+
+            var map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 10, // Nivel de zoom inicial
+                center: { lat: -34.7303025, lng: -58.268868 },
+            });
+
+            new google.maps.Marker({
+                position: marker1,
+                map: map,
+                title: "Alicia M. de Justo 740, 3° piso Oficina 20"
+            });
+            new google.maps.Marker({
+                position: marker2,
+                map: map,
+                title: "Camino Parque Centenario 490, Alicia M. de Justo 740 3° piso Oficina 20"
+            });
+        }
+    </script>
+
   <!--email controler-->
-  <script type="text/javascript">
-    (function () {
-      // https://dashboard.emailjs.com/admin/account
-      emailjs.init('guLpCoCCJ8x6mhHtU');
-    })();
-  </script>
-  <script type="text/javascript">
-    window.onload = function () {
-      document.getElementById('contact-form').addEventListener('submit', function (event) {
-        event.preventDefault();
-        // generate a five digit number for the contact_number variable
-        this.contact_number.value = Math.random() * 100000 | 0;
-        // these IDs from the previous steps
-        emailjs.sendForm('contacto_michelli', 'contacto_michelli', this)
-          .then(function () {
-            console.log('SUCCESS!');
-          }, function (error) {
-            console.log('FAILED...', error);
-          });
-      });
-    }
-  </script>
+<script type="text/javascript">
+  (function () {
+    emailjs.init('guLpCoCCJ8x6mhHtU');
+  })();
+</script>
+<script type="text/javascript">
+  window.onload = function () {
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      this.contact_number.value = Math.random() * 100000 | 0;
+      emailjs.sendForm('contacto_michelli', 'contacto_michelli', this)
+        .then(function () {
+          console.log('¡ÉXITO!');
+          document.getElementById('fullName').value = '';
+          document.getElementById('subjet').value = '';
+          document.getElementById('email').value = '';
+          document.getElementById('message').value = '';
+          Toastify({
+            text: "¡Mensaje enviado con éxito!",
+            className:"notification-exito",
+            duration: 3000,
+            gravity: "top",
+            position: "center",
+          }).showToast();
+        }, function (error) {
+          console.log('FALLIDO...', error);
+          // Mostrar notificación de error
+          Toastify({
+            text: "¡Error al enviar el mensaje!",
+            className:"notification-error",
+            duration: 3000,
+            gravity: "top", 
+            position: "center",
+          }).showToast();
+        });
+    });
+  }
+</script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -47,7 +91,7 @@
   <header>
     <nav class="navbar navbar-expand-lg">
       <div class="container d-flex flex-row justify-content-between">
-        <a class="navbar-brand" href="index.html"><img width="259px" height="auto" src="img/logo-de-micheli.png" /></a>
+        <a class="navbar-brand" href="index.html"><img width="259px" height="auto" id="imagen-logo" src="img/logo-de-micheli.png" /></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -69,7 +113,7 @@
     </nav>
   </header>
 
-  <main class="container contact ">
+  <main class="container contact my-4">
     <div class="row justify-content-center align">
       <h3 class="ms-5 text-center">Contacto</h3>
       <div class="col-12 col-md-6 m-4">
@@ -80,29 +124,41 @@
             <div class="col-10">
               <div class="mb-3">
                 <label for="fullName" class="form-label">Nombre completo</label>
-                <input type="text" class="form-control" id="fullName" name="fullName">
+                <input type="text" class="form-control" id="fullName" name="fullName" required>
               </div>
               <div class="mb-3">
                 <label for="subjet" class="form-label">Asunto</label>
-                <input type="text" class="form-control" id="subjet" name="subjet">
+                <input type="text" class="form-control" id="subjet" name="subjet" required>
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" name="email">
+                <input type="email" class="form-control" id="email" name="email" required>
               </div>
             </div>
             <div class="col-10 text-end">
               <div class="mb-3 text-start">
                 <label for="message" class="form-label">Mensaje</label>
-                <textarea class="form-control" id="message" name="message" rows="9"></textarea>
+                <textarea class="form-control" id="message" name="message" rows="9" required></textarea>
               </div>
               <input type="submit" class="btn btn-secondary" value="enviar">
             </div>
           </div>
         </form>
       </div>
-  <div class="contact-map col">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13094.582575733035!2d-58.062901966226704!3d-34.86513019972546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2dd5a62536efd%3A0xf0440fff97b3174f!2sMarciano-De%20Micheli!5e0!3m2!1ses!2sar!4v1711653857057!5m2!1ses!2sar" width="100%" height="450" style="border:0; " allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  </div>
+  <div class="contact-map col" >
+ <div class="map col-12" id="map" style="max-width: 500px; height: 450px;"></div>
+<div class="col-12 d-flex mt-3">
+  <div class="col-6 d-flex">
+<div><img src="loction-icono.png" class=""></div>
+    <p>Camino Parque Centenario 490, Alicia M. de Justo 740 3° piso Oficina 20</p>
+  </div>
+    <div class="col-6 d-flex">
+<div><img src="loction-icono.png" class=""></div>
+    <p>Alicia M. de Justo 740, 3° piso Oficina 20</p>
+  </div>
+</div>
+</div>
+
     </div>
   </main>
   <!-- FOOTER -->
@@ -122,15 +178,18 @@
                 <a class="nav-link" href="proyectos.html">Proyectos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contacto.html">Contacto</a>
+                <a class="nav-link" href="contact.html">Contacto</a>
               </li>
             </ul>
           </div>
           <div class="col-12 col-md-5">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.instagram.com/marcianodemicheli/?hl=es"><img src="img/ig-logo.png"
+              <li class="nav-item d-flex">
+                <a class="nav-link " href="https://www.instagram.com/marcianodemicheli/?hl=es"><img src="img/ig-logo.png"
                     class=""> Instagram</a>
+              </li>
+                <li class="nav-item py-2">
+                <a class="nav-link" href="https://www.linkedin.com/company/marciano-de-micheli"><img src="linkedin-icono.png" class=""> Linkedin</a>
               </li>
               <li class="nav-item py-2">
                 <a class="nav-link"><img src="img/envelop.png" class=""> info@marcianodemicheli.com</a>
@@ -146,5 +205,6 @@
   </footer>
 
 </body>
-
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOufaicr5T7WwClwmclBn3KcHF9N-XerY&callback=initMap"
+        async defer></script>
 </html>

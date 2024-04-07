@@ -5,6 +5,7 @@ body {
 }
 header .navbar .navbar-brand {
   padding: 38px 0 18px 0;
+  padding-bottom: 14vh;
 }
 header .navbar .nav-link {
   padding-left: 20px;
@@ -32,11 +33,12 @@ header .navbar .nav-link.active {
 
 
 .carousel-item{
-
+max-height: 100vh;
 object-fit:cover;
 object-position:center;
 }
 .carousel-item img{
+ max-height: 100vh; 
 object-fit: cover;
 object-position: center;
 }
@@ -114,7 +116,7 @@ object-position: center;
   opacity: 1;
 }
 section.contact {
-  padding: 168px 0 231px;
+  padding: 168px 0 100px;
 }
 .contact h3 {
   color: #525252;
@@ -193,7 +195,7 @@ section.contact {
   font-size: 20px;
 }
 .banner-img {
-  display:block;
+min-width: 100%;
   max-height: 100vh;
 object-fit:cover;
 object-position:center;
@@ -247,16 +249,32 @@ min-width: 100%;
 margin-top: 10vh;
 }
 
+.notification-exito{
+background: rgb(116, 197, 110);
+color: white;
+}
+.notification-error{
+background: rgb(235, 75, 75);
+color: white;
+}
 
 footer {
 
-  padding-top: 110px;
-  padding-bottom: 216px;
+  padding-top: 100px;
+  padding-bottom: 70px;
 }
 footer .navbar-brand img {
   padding-top: 42px;
   padding-bottom: 66px;
 }
+
+footer ul {
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding-top: 20px;
+}
+
 
 @media (min-width: 768px) {
   .grid-item {
@@ -266,26 +284,5 @@ footer .navbar-brand img {
  
 }
 
-@media only screen and (max-width: 767px) {
-   .banner-img {
-height:min-content;
-} 
-}
 
-class="banner-img img-fluid w-100"
 
-  <section class="ontainer-fluid  mt-5">
-    <div class="row g-5">          
-      <div class="col-12 d-flex flex-column justify-content-center align-items-center">
-        <div class="m-4">
-          <img src="img/nizuc-02-m25/002-nizuc_2 - render.jpg" class="img-fluid" alt="">
-        </div>
-         <div class="m-4">
-          <img src="img/nizuc-02-m25/002-nizuc_3 - render.jpg" class="img-fluid" alt="">
-        </div>
-         <div class="m-4">
-          <img src="img/nizuc-02-m25/002-nizuc_4 - render.jpg" class="img-fluid" alt="">
-        </div>
-      </div>
-    </div>
-  </section>

@@ -99,58 +99,32 @@
 
     </div>
   </main>
-         <section class=" container-fluid mt-4">
-        <div class="row g-5">
-<div class="col-12 d-flex  align-items-center justify-content-center">
-    <div class="m-4  ">
-    <img src="img/carilo-golf/DJI_0898.JPG" class="img-fluid w-100" alt="">
+   
+
+      
+
+<!-- Gallery -->
+<div class="container mt-5">
+  <div class="row d-flex justify-content-center align-items-center" id="gallery">
+      <!-- Las tarjetas de imagen se insertarán aquí -->
   </div>
-    <div class="m-4 ">
-    <img src="img/carilo-golf/DJI_0918.JPG" class="img-fluid" alt="">
-  </div>
-  </div>
+</div>
+<!-- Gallery -->
 
 
-  <div class="col-6 d-flex flex-column align-items-center justify-content-center">
-  <div class="m-4 ">
-    <img src="img/carilo-golf/DSC_6459.JPG" class="img-fluid" alt="">
-  </div>
-    <div class="m-4 ">
-    <img src="img/carilo-golf/DSC_6455.JPG" class="img-fluid" alt="">
+
+ <!-- Modal -->
+ <div class="modal fade " id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-body">
+              <img id="modalImage" src="" alt="Imagen Completa" class="img-fluid">
+          </div>
+      </div>
   </div>
 </div>
 
-  <div class="col-6 d-flex flex-column align-items-center justify-content-center">
-  <div class="m-4 ">
-    <img src="img/carilo-golf/DSC_6413.JPG" class="img-fluid" alt="">
-  </div>
-    <div class="m-4 ">
-    <img src="img/carilo-golf/DSC_6373.JPG" class="img-fluid" alt="">
-  </div>
-</div>
-
- <div class="col-6 d-flex flex-column align-items-center justify-content-center">
-  <div class="m-4 ">
-    <img src="img/carilo-golf/DSC_6464.JPG" class="img-fluid" alt="">
-  </div>
-    <div class="m-4 ">
-    <img src="img/carilo-golf/DSC_6491.JPG" class="img-fluid" alt="">
-  </div>
-</div>
-
- <div class="col-6 d-flex flex-column align-items-center justify-content-center">
-  <div class="m-4 ">
-    <img src="img/carilo-golf/DSC_6863.JPG" class="img-fluid" alt="">
-  </div>
-    <div class="m-4 ">
-    <img src="img/carilo-golf/DSC_6855.JPG" class="img-fluid" alt="">
-  </div>
-</div>
-    
-</div>
-      </section>   
   <!-- FOOTER -->
-  
   <footer class="container">
     <div class="row">
       <div class="col-12 col-md-4 offset-1">
@@ -180,11 +154,13 @@
                 <li class="nav-item py-2">
                 <a class="nav-link" href="https://www.linkedin.com/company/marciano-de-micheli"><img src="linkedin-icono.png" class=""> Linkedin</a>
               </li>
-              <li class="nav-item py-2">
-                <a class="nav-link"><img src="img/envelop.png" class=""> info@marcianodemicheli.com</a>
+              <li class="nav-item py-2 ">
+
+                <a href="mailto:info@marcianodemicheli.com" class="nav-link d'flex" ><img src="img/envelop.png" class=""> info@marcianodemicheli.com</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link"><img src="img/phone.png" class=""> +54 11 5027 3534</a>
+                
+                <a href="tel:+54 11 5027 3534" class="nav-link" ><img src="img/phone.png" class=""> +54 11 5027 3534</a>
               </li>
             </ul>
           </div>
@@ -192,6 +168,63 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    
+    $('#imageModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget); 
+        var imageSrc = button.data('src'); 
+        modal.find('.modal-body #modalImage').attr('src', imageSrc);
+    });
+</script>
+<script>
+ document.addEventListener('DOMContentLoaded', function() {
+  const imageDirectory = 'img/carilo-golf/';
+  
+  const imageFiles = [
+  "DJI_0898.JPG",
+"DJI_0918.JPG",
+"DSC_6459.JPG",
+"DSC_6455.JPG",
+"DSC_6413.JPG",
+"DSC_6373.JPG" ,
+"DSC_6464.JPG",
+"DSC_6491.JPG",
+"DSC_6863.JPG",
+"DSC_6855.JPG"
+  ];
+  
+  const galleryContainer = document.getElementById('gallery');
+  
+  imageFiles.forEach((filename) => {
+      const imagePath = `${imageDirectory}${filename}`;
+      const altText = `Imagen ${filename.split('.')[0]}`;
+      
+      const cardHtml = `
+      <div class="bg-image col-md-4 col-sm-6 mb-4 position-relative">
+              <img src="${imagePath}" alt="${altText}" class="img-fluid gallery-img" data-toggle="modal" data-target="#imageModal" data-src="${imagePath}">
+              <div class="mask" " data-toggle="modal" data-target="#imageModal">
+                  <div class="d-flex justify-content-center align-items-center w-100">
+                      <p class="text-grey mb-0">VER</p>
+                  </div>
+              </div>
+          </div>
+      `;
+      
+      galleryContainer.insertAdjacentHTML('beforeend', cardHtml);
+  });
+  
+  document.addEventListener('click', function(event) {
+      if (event.target.matches('.gallery-img, .mask')) {
+          const imageSrc = event.target.getAttribute('data-src');
+          document.getElementById('modalImage').src = imageSrc;
+      }
+  });
+ })
+</script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   
 </body>
 

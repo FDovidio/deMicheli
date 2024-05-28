@@ -45,7 +45,7 @@
     </nav>
   </header>
 
-  <ma class="container-fluid">
+  <main class="container-fluid">
     <div class="catalog">
       <div class="row">
         <div class="col-12 col-md-4 border-bottom">
@@ -70,7 +70,7 @@
       <div class="row mt-5 ">
         <div class="col-12 position-relative px-0">
           <h4 class="position-absolute top-0 left-0 ps-5 pt-5 w-100">
-            <a href="proyectos.html"><img src="img/arrow-left.png" /></a> Gualba<br/>          
+            <a href="proyectos.html"><img src="img/arrow-left.png" /></a> Barcelona<br/>          
           </h4>
           <img class="banner-img img-fluid w-100" src="img/barcelona/1. PORTADA.jpg"/>
         </div>
@@ -78,7 +78,7 @@
       <div class="container-fluid">
         <div class="row g-5">
           <h5 class="col-12 ps-5">
-            Gualba
+            BARCELONA
           </h5>          
           <div class="col-12 col-sm-6 col-lg-5 col-lx-4 ps-5">
             <p class="technic-info">
@@ -92,24 +92,65 @@
 
     </div>
   </main>
-        <section class=" container-fluid mt-4">
-        <div class="row g-5 "> 
-          <div class="col-12  d-flex flex-column align-items-center justify-content-center">
-            <div class="col-12 p-4">
-<img src="img/barcelona/4.jpg" class="img-fluid img-description" alt="">            
-          </div>    
-          <div class="col-12 p-4">
-<img src="img/barcelona/31.4.jpg" class="img-fluid img-description" alt="">            
-          </div>  
-          <div class="col-12 p-4">
-<img src="img/barcelona/42.jpg" class="img-fluid img-description" alt="">            
-          </div>    
-          <div class="col-12 p-4">
-<img src="img/barcelona/A1.jpg" class="img-fluid img-description" alt="">            
-          </div>  
-        </div>
 
-      </section>
+<!-- Gallery -->
+<div class="container mt-5  ">
+  <div class="row d-flex d-flex justify-content-center align-items-center">
+ 
+      <div class="bg-image col-md-4 col-sm-6 mb-4 position-relative">
+          <img src="img/barcelona/4.jpg" alt="Imagen 2" class="img-fluid gallery-img"  data-toggle="modal" data-target="#imageModal" data-src="img/barcelona/4.jpg">
+          
+        <div class="mask " data-toggle="modal" data-target="#imageModal">
+            <div class="d-flex justify-content-center align-items-center w-100">
+              <p class="text-white mb-0 " >VER</p>
+            </div>
+          </div>
+      </div>
+
+      <div class="bg-image col-md-4 col-sm-6 mb-4 position-relative">
+        <img src="img/barcelona/31.4.jpg"  alt="Imagen 2" class="img-fluid gallery-img"  data-toggle="modal" data-target="#imageModal" data-src="img/barcelona/31.4.jpg" >      
+      <div class="mask "  data-toggle="modal" data-target="#imageModal">
+          <div class="d-flex justify-content-center align-items-center w-100">
+            <p class="text-white mb-0 " >VER</p>
+          </div>
+        </div>
+    </div>
+
+    <div class="bg-image col-md-4 col-sm-6 mb-4 position-relative">
+      <img src="img/barcelona/42.jpg"  alt="Imagen 2" class="img-fluid gallery-img"  data-toggle="modal" data-target="#imageModal" data-src="img/barcelona/42.jpg" >      
+    <div class="mask "   data-toggle="modal" data-target="#imageModal" data-src="img/barcelona/42.jpg" >
+        <div class="d-flex justify-content-center align-items-center w-100">
+          <p class="text-white mb-0 " >VER</p>
+        </div>
+      </div>
+  </div>
+
+  <div class="bg-image col-md-4 col-sm-6 mb-4 position-relative ">
+    <img src="img/barcelona/A1.jpg"  alt="Imagen 2" class="img-fluid gallery-img"  data-toggle="modal" data-target="#imageModal" data-src="img/barcelona/A1.jpg" >      
+  <div class="mask "  data-toggle="modal" data-target="#imageModal" data-src="img/barcelona/A1.jpg">
+      <div class="d-flex justify-content-center align-items-center w-100" >
+        <p class="text-white mb-0 " >VER</p>
+      </div>
+    </div>
+</div>
+
+  </div>
+</div>
+<!-- Gallery -->
+
+
+
+ <!-- Modal -->
+ <div class="modal fade " id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-body">
+              <img id="modalImage" src="" alt="Imagen Completa" class="img-fluid ">
+          </div>
+      </div>
+  </div>
+</div>
+
   <!-- FOOTER -->
   <footer class="container">
     <div class="row">
@@ -140,11 +181,13 @@
                 <li class="nav-item py-2">
                 <a class="nav-link" href="https://www.linkedin.com/company/marciano-de-micheli"><img src="linkedin-icono.png" class=""> Linkedin</a>
               </li>
-              <li class="nav-item py-2">
-                <a class="nav-link"><img src="img/envelop.png" class=""> info@marcianodemicheli.com</a>
+              <li class="nav-item py-2 ">
+
+                <a href="mailto:info@marcianodemicheli.com" class="nav-link d'flex" ><img src="img/envelop.png" class=""> info@marcianodemicheli.com</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link"><img src="img/phone.png" class=""> +54 11 5027 3534</a>
+                
+                <a href="tel:+54 11 5027 3534" class="nav-link" ><img src="img/phone.png" class=""> +54 11 5027 3534</a>
               </li>
             </ul>
           </div>
@@ -152,6 +195,19 @@
       </div>
     </div>
   </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // Script para pasar la dirección de la imagen clickeada al modal
+    $('#imageModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget); // Botón que activa el modal
+        var imageSrc = button.data('src'); // Extraer la información de data-src
+        var modal = $(this);
+        modal.find('.modal-body #modalImage').attr('src', imageSrc);
+    });
+</script>
 </body>
 
 </html>

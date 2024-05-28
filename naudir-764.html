@@ -93,17 +93,28 @@
       </div>
       </div>
   </main>
-      <div class="row g-4">          
-      <div class="col-12 d-flex flex-column justify-content-center align-items-center">
-        <div class="col-12 p-4">
-          <img src="img/naudir-764/02.jpg" class="img-fluid img-description alt="">
-        </div>
-         <div class="col-12 p-4">
-          <img src="img/naudir-764/02.jpg" class="img-fluid img-description alt="">
-        </div>
-      </div>
-    </div>
+
   </section>
+
+<!-- Gallery -->
+<div class="container mt-5">
+  <div class="row d-flex justify-content-center align-items-center" id="gallery">
+     
+  </div>
+</div>
+<!-- Gallery -->
+
+<!-- Modal -->
+<div class="modal fade " id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-body">
+              <img id="modalImage" src="" alt="Imagen Completa" class="img-fluid ">
+          </div>
+      </div>
+  </div>
+</div>
+
   <!-- FOOTER -->
   <footer class="container">
     <div class="row">
@@ -134,11 +145,13 @@
                 <li class="nav-item py-2">
                 <a class="nav-link" href="https://www.linkedin.com/company/marciano-de-micheli"><img src="linkedin-icono.png" class=""> Linkedin</a>
               </li>
-              <li class="nav-item py-2">
-                <a class="nav-link"><img src="img/envelop.png" class=""> info@marcianodemicheli.com</a>
+              <li class="nav-item py-2 ">
+
+                <a href="mailto:info@marcianodemicheli.com" class="nav-link d'flex" ><img src="img/envelop.png" class=""> info@marcianodemicheli.com</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link"><img src="img/phone.png" class=""> +54 11 5027 3534</a>
+                
+                <a href="tel:+54 11 5027 3534" class="nav-link" ><img src="img/phone.png" class=""> +54 11 5027 3534</a>
               </li>
             </ul>
           </div>
@@ -146,6 +159,49 @@
       </div>
     </div>
   </footer>
+
+
+<script>
+
+  const imageFiles = [
+  "img/naudir-764/01.jpg",
+"img/naudir-764/02.jpg"
+  ];
+  
+  const galleryContainer = document.getElementById('gallery');
+  
+  imageFiles.forEach((filename) => {
+      const imagePath = `${filename}`;
+      const altText = `Imagen ${filename.split('.')[0]}`;
+      
+      const cardHtml = `
+          <div class="bg-image col-md-4 col-sm-6 mb-4 position-relative">
+              <img src="${imagePath}" alt="${altText}" class="img-fluid gallery-img" data-toggle="modal" data-target="#imageModal" data-src="${imagePath}">
+              <div class="mask" " data-toggle="modal" data-target="#imageModal">
+                  <div class="d-flex justify-content-center align-items-center w-100">
+                      <p class="text-grey mb-0">VER</p>
+                  </div>
+              </div>
+          </div>
+      `;
+      
+      galleryContainer.insertAdjacentHTML('beforeend', cardHtml);
+  });
+  
+  document.addEventListener('click', function(event) {
+            if (event.target.matches('.gallery-img, .mask')) {
+                let imageSrc = event.target.getAttribute('data-src');
+                if (!imageSrc) {
+                    imageSrc = event.target.parentElement.querySelector('.gallery-img').getAttribute('data-src');
+                }
+                document.getElementById('modalImage').src = imageSrc;
+            }
+        });
+</script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>

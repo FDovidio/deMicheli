@@ -17,16 +17,15 @@ max-height: 100px;
 
 }
 
-header img {
+nav img {
   width: 200px;
-}
-header .navbar .navbar-brand {
-  padding: 18px ;
-  padding-bottom: 40px;
  
 }
+
+
+
 header .navbar .nav-link {
-  margin-bottom: 20px;
+  
  
   padding-right: 20px;
   margin-right: 72px;

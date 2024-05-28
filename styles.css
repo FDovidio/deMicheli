@@ -57,9 +57,7 @@ main {
   padding-left: 0;
 }
 
-#catalogBarAll{
-  margin-right: 35px;
-}
+
 
 .carousel-item{
 
@@ -179,11 +177,13 @@ section.contact {
   border: none;
 }
 .catalog {
-  padding:  130px 0;  
+
+ padding-top: 120px;
 
 }
 #catalogBarAll{
   padding-top: 120px;
+  
 }
 .catalog h4 {
   
@@ -193,16 +193,13 @@ section.contact {
   text-transform: uppercase;
   display: none;
 }
-.catalog .nav {
-  padding-right: 20vh;
-  width: 100%;
-}
+
 .catalog .nav .nav-link {
   color: rgba(15, 15, 15, 0.4);
   font-size: 26px;
   font-weight: 600;
   text-transform: uppercase;
-  margin: 0 10px;
+  margin-right: 50px 
 }
 .catalog .nav .nav-link.active {
   color: #525252;
